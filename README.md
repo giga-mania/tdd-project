@@ -1,10 +1,12 @@
-TDD is a technique for designing and structuring code that encourages simplicity and increases one's confidence in code, even as its size increases.
+# Test-Driven Development 
+
+#### TDD is a technique for designing and structuring code that encourages simplicity and increases one's confidence in code, even as its size increases.
 
 		->> That simplicity - the art of maximizing the amount of work not done, is essential
 		->> That obviousness and clarity are more virtuous than cleverness
 		->> That writing uncluttered code is a key component of being successful
 	
-	Red-Green-Refactor: The building block of TDD
+## Red-Green-Refactor: The building block of TDD
 	
 	Red:
 		Write a failing test (including possible compilations failures). Run the test suite to verify the failing test.
@@ -13,7 +15,7 @@ TDD is a technique for designing and structuring code that encourages simplicity
 	Refactor:
 		Remove any code smells. These mau be due to duplication, hardcoded values, or improper use of language 	idioms (e.g., using verbose loop instead of a built-in iterator). If any test breaks during refactoring, prioritize getting them back to green before exiting the phase. 
 		
-	Failing: Red test
+### Failing: Red test
 		
 		//JavaScript
 		const assert = require("assert")                                                                   
@@ -49,8 +51,7 @@ TDD is a technique for designing and structuring code that encourages simplicity
 				t.Errorf("Expected 10, got: [%d]", tenner.amount)
 			}
 		}
-																		
-	Going Green: Green test
+### Going Green: Green test
 	
 		// JavaScript
 		...
@@ -81,8 +82,7 @@ TDD is a technique for designing and structuring code that encourages simplicity
 		...
 				
 		//GO
-		... 
-		
+		...
 		type Dollar struct {
 			amount int
 		}
@@ -90,12 +90,9 @@ TDD is a technique for designing and structuring code that encourages simplicity
 		func (d dollar) Times(multiplier int) Dollar {
 			return Dollar{10}
 		}
-		
-		
 		...
 
-
-	Cleaning up: Refactor
+### Cleaning up: Refactor
 	
 		//JavaScript
 		...
@@ -118,3 +115,12 @@ TDD is a technique for designing and structuring code that encourages simplicity
 			return Dollar{d.amount * multiplier}
 		}
 		...
+
+
+*This repo will contain all the resources and code examples I use to learn Test-Driven Development*
+<br/>
+
+This repo is based on following resources:
+>  * *Learing Test-Driven Development by Saleem Siddiqui (O'Reilly)* 
+> <br/>
+> * *...*
